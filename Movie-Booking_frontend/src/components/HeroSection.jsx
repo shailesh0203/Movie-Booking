@@ -1,0 +1,31 @@
+import React from 'react'
+import { assets } from '../assets/assets'
+import { ArrowRight, CalendarIcon, ClockIcon, } from 'lucide-react'
+
+function HeroSection() {
+  return (
+    <div
+      className='flex flex-col items-start justify-center gap-4 px-4 md:px-36 bg-cover bg-center h-screen'
+      style={{ backgroundImage: `url(${assets.backgroundImage})` }}
+    >
+        <img src={assets.marvelLogo} alt="" className="max-h-11 lg:h-11 mt-20"/>
+        <h1 className='text-5xl md:text-[70px] md:leading-18 font-semibold max-w-100'>Guardians<br/> of the Galaxy</h1>
+        <div className='flex items-center gap-4 text-gray-300'>
+            <span>Action | Adventure | Sci-Fi</span>
+            <div className='flex items-center gap-1'>
+                <CalendarIcon className="w-4.5 h-4.5"/>2018
+            </div>
+            <div className='flex items-center gap-1'>
+                <ClockIcon className="w-4.5 h-4.5"/>2h 8m
+            </div>
+        </div>
+        <p className='max-w-wd text-gray-300'> In a post-apocalyptic world where citie ride on wheels and consume each other to survive, two people meet in London and try to stop a conspiracy</p>
+        <button className='flex items-center gap-1 px-6 py-3 text-sm bg-primary-dull transition rounded-full font-medium cursor-pointer'>
+            Explore Movies
+            <ArrowRight className="w-5 h-5"/>
+        </button>
+    </div>
+  )
+}
+
+export default HeroSection
