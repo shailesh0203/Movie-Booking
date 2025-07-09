@@ -1,8 +1,10 @@
 import React from 'react'
 import { assets } from '../assets/assets'
 import { ArrowRight, CalendarIcon, ClockIcon, } from 'lucide-react'
+import {useNavigate} from 'react-router-dom'
 
 function HeroSection() {
+  const navigate=useNavigate()
   return (
     <div
       className='flex flex-col items-start justify-center gap-4 px-4 md:px-36 bg-cover bg-center h-screen'
@@ -20,7 +22,7 @@ function HeroSection() {
             </div>
         </div>
         <p className='max-w-wd text-gray-300'> In a post-apocalyptic world where citie ride on wheels and consume each other to survive, two people meet in London and try to stop a conspiracy</p>
-        <button className='flex items-center gap-1 px-6 py-3 text-sm bg-primary-dull transition rounded-full font-medium cursor-pointer'>
+        <button  onClick={()=>navigate('/movies')} className='flex items-center gap-1 px-6 py-3 text-sm bg-primary-dull transition rounded-full font-medium cursor-pointer'>
             Explore Movies
             <ArrowRight className="w-5 h-5"/>
         </button>
