@@ -17,6 +17,7 @@ function App() {
   return (
    <>
     {!isAdminRoute && <Navbar/>}
+    <Toaster position="top-center" />
    <Routes>
     <Route path='/' element={<Home/>}/>
     <Route path='/movies' element={<Movies/>}/>
