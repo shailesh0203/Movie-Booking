@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-const showSchema=new mongoose.model({
+const showSchema=new mongoose.Schema({
     movie:{
         type:String,
         required:true,
