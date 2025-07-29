@@ -1,5 +1,5 @@
 import Booking from "../models/booking.model.js";
-import Show from "../models/Show.js"
+import Show from "../models/show.model.js"
 
 
 // Function to check availability of selected seats for a movie
@@ -60,4 +60,18 @@ export const createBooking=async(req,res)=>{
     }
 }
 
+export const getOccupiedSeats=async(req,res)=>{
+  try {
+    
+    const {showId}=req.params;
+    const showData = await Show.findById(showId)
+
+    const occupiedSeats=Object.keys(showData.occupiedSeats)
+
+    res.json({success:true,occupiedSeats})
+  } catch (error) {
+     console.log(error.message)
+         res.json({success:false,message:error.message})
+  }
+}
 
