@@ -6,6 +6,6 @@ const userRouter=express.Router();
 
 userRouter.get('/bookings',getUserBookings)
 userRouter.get('/update-favourite',updateFavorite)
-userRouter.get('/favourites',getFavorites)
+userRouter.get('/favorites',getFavorites)
 
 export default userRouter
